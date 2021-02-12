@@ -1,0 +1,7 @@
+# Thinkific Specific apps
+cask "1password"
+cask "psequel"
+cask "postman"
+brew "awscli"
+brew "kubeseal"
+brew "jsonnet"

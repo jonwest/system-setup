@@ -1,0 +1,90 @@
+####
+## SETUP
+####
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "sambadevi/powerlevel9k"
+cask_args appdir: "/Applications"
+
+####
+## CLI UTILS
+####
+brew "git"
+brew "neovim"
+brew "sambadevi/powerlevel9k/powerlevel9k"
+
+####
+## DEVELOPMENT
+####
+cask "sublime-text" 
+cask "visual-studio-code"
+cask "docker"
+brew "nvm"
+brew "go"
+brew "terragrunt"
+brew "rbenv"
+brew "ruby-build"
+brew "terraform"
+brew "terraform-docs"
+
+####
+## K8s
+####
+brew "helm"
+brew "kubernetes-cli"
+brew "kubeseal"
+brew "kustomize"
+
+####
+## SYSTEM UTILS
+####
+brew "bat"                # Syntax Highlighting
+brew "exa"                # Better `ls` behaviour
+brew "ffmpeg"             # Video Processing
+brew "gnu-sed"
+cask "hammerspoon"        # Mac Automation
+brew "htop"
+brew "mas"                # Mac App Store Integration
+brew "p7zip"
+brew "ssh-copy-id"
+brew "tldr"               # Human readable `man` alternative
+brew "tmux"
+cask "tunnelblick"        # OpenVPN Client
+brew "trash"              # send to trash instead of traditional `rm`
+brew "watch"
+brew "wget"
+brew "zsh"
+
+
+####
+## DESKTOP APPS
+####
+cask "alacritty"      # Terminal
+cask "google-chrome"
+cask "firefox"
+cask "postbox"        # E-mail client that doesn't suck
+cask "calendar-366"   # Calendar replacement
+cask "doxie"          # Paperless Scanning App
+cask "authy"
+cask "autodesk-fusion360"
+cask "spotify"
+cask "notion"
+cask "obsidian"
+cask "nextcloud"
+cask "signal"
+cask "slack"
+
+mas "HazeOver", id: 430798174
+mas "Microsoft Remote Desktop", id: 1295203466
+
+## Utilities
+cask "hammerspoon"      # Automation
+cask "alfred"           # Spotlight replacement
+cask "rectangle"        # Window Management
+cask "caffeine"         # Keep computer awake
+cask "keka"             # Decompression
+brew "dockutil"         # Manage Dock
+cask "avibrazil-rdm"    # Screen resolution management
+cask "mtmr"             # Touchbar customization
+brew "wireguard-tools"  # Wireguard VPN Client
+cask "mos"              # Better mouse preferences
