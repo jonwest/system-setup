@@ -1,13 +1,13 @@
-#   _                      _             _ 
+#   _                      _             _
 #  | |_ ___ _ __ _ __ ___ (_)_ __   __ _| |
 #  | __/ _ \ '__| '_ ` _ \| | '_ \ / _` | |
 #  | ||  __/ |  | | | | | | | | | | (_| | |
 #   \__\___|_|  |_| |_| |_|_|_| |_|\__,_|_|
-#          ___  ___| |_ _   _ _ __         
-#         / __|/ _ \ __| | | | '_ \        
-#         \__ \  __/ |_| |_| | |_) |       
-#         |___/\___|\__|\__,_| .__/        
-#                            |_|           
+#          ___  ___| |_ _   _ _ __
+#         / __|/ _ \ __| | | | '_ \
+#         \__ \  __/ |_| |_| | |_) |
+#         |___/\___|\__|\__,_| .__/
+#                            |_|
 
 echo "Setting up Terminal...\n\n"
 
@@ -24,7 +24,7 @@ fi
 ####
 ## Install oh-my-zsh
 ####
-if ! [[ -d "$HOME/.oh-my-zsh" ]]; then 
+if ! [[ -d "$HOME/.oh-my-zsh" ]]; then
   echo "Installing oh-my-zsh..."
   sh -c \
   "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -34,7 +34,7 @@ fi
 ####
 ## Install Powerlevel10k
 ####
-if ! [[ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]]; then 
+if ! [[ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]]; then
   echo "Installing powerlevel10k..."
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 else
@@ -46,6 +46,8 @@ fi
 ####
 ## Install oh-my-tmux
 ####
+[[ -d "$HOME/.tmux" ]] || mkdir "$HOME/.tmux"
+
 if ! [[ -d "$HOME/.tmux/plugins" ]]; then
   echo "Creating tmux plugin folder..."
   mkdir -p "$HOME/.tmux/plugins"
