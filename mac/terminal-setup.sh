@@ -22,24 +22,18 @@ fi
 
 
 ####
-## Install oh-my-zsh
+## Install Prezto
 ####
-if ! [[ -d "$HOME/.oh-my-zsh" ]]; then 
-  echo "Installing oh-my-zsh..."
-  sh -c \
-  "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if ! [[ -d "$HOME/.zprezto" ]]; then
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto"
 fi
 
 
 ####
-## Install Powerlevel10k
+## Install Zplug
 ####
-if ! [[ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]]; then 
-  echo "Installing powerlevel10k..."
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
-else
-  echo "Updating powerlevel10k..."
-  cd "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" && git pull && cd $RUN_DIR
+if ! [[ $(command -v zplug) ]]; then
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
 
 
@@ -82,4 +76,13 @@ fi
 if ! [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
   echo "Installing zsh-syntax-highlighting..."
   git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting";
+fi
+
+
+####
+## Install rclone
+####
+if ! [[ $(command -v rclone) ]]; then
+  echo "Installing rclone..."
+  curl https://rclone.org/install.sh | sudo bash
 fi

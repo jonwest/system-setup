@@ -59,11 +59,10 @@ brew "zsh"
 ####
 ## DESKTOP APPS
 ####
-cask "alacritty"      # Terminal
+cask "kitty"          # Terminal
 cask "google-chrome"
 cask "firefox"
 cask "postbox"        # E-mail client that doesn't suck
-cask "calendar-366"   # Calendar replacement
 cask "doxie"          # Paperless Scanning App
 cask "authy"
 cask "autodesk-fusion360"
@@ -74,7 +73,6 @@ cask "nextcloud"
 cask "signal"
 cask "slack"
 cask "cyberduck"
-cask "mountain-duck"
 
 mas "HazeOver", id: 430798174
 mas "Microsoft Remote Desktop", id: 1295203466
